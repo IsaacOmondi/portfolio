@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Isaac Omondi - Backend Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * {
+            @apply transition-colors duration-300;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100">
+    <nav class="sticky top-0 z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="font-mono text-lg font-bold hover:text-blue-600 dark:hover:text-blue-400">io</a>
+            <div class="flex gap-6">
+                <a href="index.html" class="text-sm hover:text-blue-600 dark:hover:text-blue-400">Home</a>
+                <a href="about.html" class="text-sm hover:text-blue-600 dark:hover:text-blue-400">About</a>
+                <a href="portfolio.html" class="text-sm hover:text-blue-600 dark:hover:text-blue-400">Work</a>
+                <a href="contact.html" class="text-sm hover:text-blue-600 dark:hover:text-blue-400">Contact</a>
+                <button id="themeToggle" class="text-sm hover:text-blue-600 dark:hover:text-blue-400 font-mono">
+                    <span class="light-mode">◐</span>
+                    <span class="dark-mode hidden">◑</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="py-20 px-6 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="font-mono text-5xl md:text-6xl font-bold mb-6">About me</h1>
+            <p class="text-xl text-slate-600 dark:text-slate-400">
+                Backend engineer focused on building scalable systems. 6+ years shipping production code in fintech and logistics.
+            </p>
+        </div>
+    </section>
+
+    <!-- Summary -->
+    <section class="py-20 px-6 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-mono text-2xl font-bold mb-8">Professional Summary</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <p class="font-mono font-bold text-2xl text-blue-600 dark:text-blue-400 mb-2">6+</p>
+                    <p class="text-slate-600 dark:text-slate-400">Years of backend development experience</p>
+                </div>
+                <div>
+                    <p class="font-mono font-bold text-2xl text-blue-600 dark:text-blue-400 mb-2">3</p>
+                    <p class="text-slate-600 dark:text-slate-400">Major companies, fintech and logistics focus</p>
+                </div>
+                <div>
+                    <p class="font-mono font-bold text-2xl text-blue-600 dark:text-blue-400 mb-2">5+</p>
+                    <p class="text-slate-600 dark:text-slate-400">Backend languages and frameworks mastered</p>
+                </div>
+            </div>
+            <div class="mt-12 text-slate-600 dark:text-slate-400 leading-relaxed space-y-4">
+                <p>
+                    I specialize in building robust backend systems that handle complexity at scale. My experience spans RESTful API design, microservices architecture, compliance systems, and performance optimization.
+                </p>
+                <p>
+                    My strength lies in understanding the intersection of technical challenges and business requirements. I've led initiatives that directly improved system performance, user security, and developer productivity.
+                </p>
+                <p>
+                    Outside of code, I'm passionate about mentorship and knowledge sharing. I've organized pair programming sessions, documented architectural decisions, and helped teams adopt clean architecture principles.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Timeline -->
+    <section class="py-20 px-6 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-mono text-2xl font-bold mb-12">Career Timeline</h2>
+            <div class="space-y-12">
+                <!-- Sendy -->
+                <div class="relative pl-8 pb-12 border-l-2 border-slate-200 dark:border-slate-800">
+                    <div class="absolute w-4 h-4 bg-blue-600 dark:bg-blue-400 rounded-full -left-3 top-0"></div>
+                    <div class="mb-2">
+                        <h3 class="font-mono font-bold text-lg">Node.js Middleware Chapter Lead</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 font-mono">Sendy Limited · Sep 2023 - Dec 2024</p>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 mb-4">
+                        Led the migration of legacy PHP APIs to Node.js, improving response times by 90%. Implemented clean architecture principles and mentored team members through knowledge sharing initiatives.
+                    </p>
+                    <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-2 list-disc list-inside">
+                        <li>Centralized API documentation, improving developer experience</li>
+                        <li>Reduced JSON payloads by 30%, improving API response times by 25%</li>
+                        <li>Streamlined partner acquisition flow, reducing onboarding time by 40%</li>
+                        <li>Established standardized API development protocols across systems</li>
+                    </ul>
+                </div>
+
+                <!-- Branch International -->
+                <div class="relative pl-8 pb-12 border-l-2 border-slate-200 dark:border-slate-800">
+                    <div class="absolute w-4 h-4 bg-blue-600 dark:bg-blue-400 rounded-full -left-3 top-0"></div>
+                    <div class="mb-2">
+                        <h3 class="font-mono font-bold text-lg">Back End Engineer</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 font-mono">Branch International · Apr 2019 - Aug 2023</p>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 mb-4">
+                        Engineered fintech infrastructure for lending and compliance. Built fraud detection and KYC verification systems serving users across multiple countries.
+                    </p>
+                    <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-2 list-disc list-inside">
+                        <li>Automated loan disbursement with compliance checks, reducing manual reviews by 40%</li>
+                        <li>Developed verification service identifying sanctioned users across countries</li>
+                        <li>Implemented facial recognition for fraud detection</li>
+                        <li>Optimized KYC workflows using data-driven insights</li>
+                    </ul>
+                </div>
+
+                <!-- XelphaHealth -->
+                <div class="relative pl-8 pb-12 border-l-2 border-slate-200 dark:border-slate-800">
+                    <div class="absolute w-4 h-4 bg-blue-600 dark:bg-blue-400 rounded-full -left-3 top-0"></div>
+                    <div class="mb-2">
+                        <h3 class="font-mono font-bold text-lg">Full Stack Developer</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 font-mono">XelphaHealth · May 2018 - Mar 2019</p>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 mb-4">
+                        Refactored microservices architecture and optimized database performance for healthcare platform.
+                    </p>
+                    <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-2 list-disc list-inside">
+                        <li>Eliminated 20% of redundant code through microservice refactoring</li>
+                        <li>Optimized SQL queries and conducted load testing for production readiness</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="py-20 px-6 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-mono text-2xl font-bold mb-12">Skills & Expertise</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="font-mono font-bold mb-4">Languages</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-sm font-mono">TypeScript</span>
+                        <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-sm font-mono">JavaScript</span>
+                        <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-sm font-mono">Ruby</span>
+                        <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-sm font-mono">PHP</span>
+                        <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-sm font-mono">Python</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-mono font-bold mb-4">Frameworks</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-sm font-mono">Node.js</span>
+                        <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-sm font-mono">Express.js</span>
+                        <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-sm font-mono">Ruby on Rails</span>
+                        <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-sm font-mono">Adonis.js</span>
+                        <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-sm font-mono">Laravel</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-mono font-bold mb-4">Databases</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-sm font-mono">PostgreSQL</span>
+                        <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-sm font-mono">MySQL</span>
+                        <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-sm font-mono">MongoDB</span>
+                        <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-sm font-mono">Redis</span>
+                        <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-sm font-mono">Firebase</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-mono font-bold mb-4">Tools & Infrastructure</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-sm font-mono">Git</span>
+                        <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-sm font-mono">Docker</span>
+                        <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-sm font-mono">Sidekiq</span>
+                        <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-sm font-mono">Jira</span>
+                        <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-sm font-mono">Sisense</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section class="py-20 px-6 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-mono text-2xl font-bold mb-8">Education</h2>
+            <div class="p-6 border border-slate-200 dark:border-slate-800">
+                <h3 class="font-mono font-bold text-lg mb-2">Bachelor of Business and Information Technology</h3>
+                <p class="text-slate-600 dark:text-slate-400 font-mono text-sm mb-2">Mobile Computing Specialization</p>
+                <p class="text-slate-600 dark:text-slate-400">Africa Nazarene University · 2012 - 2016</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="py-20 px-6 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="font-mono text-3xl font-bold mb-4">Let's connect</h2>
+            <p class="text-slate-600 dark:text-slate-400 mb-8">
+                Interested in discussing backend architecture, system design, or collaboration opportunities?
+            </p>
+            <a href="contact.html" class="inline-block px-6 py-3 bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 font-mono text-sm font-bold hover:opacity-80">
+                Get in touch
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 dark:border-slate-800 py-8 px-6">
+        <div class="max-w-4xl mx-auto text-center text-sm text-slate-600 dark:text-slate-400">
+            <p>Isaac Omondi · Backend Developer</p>
+            <div class="mt-4 flex justify-center gap-6">
+                <a href="mailto:Isaac.Omondi@protonmail.com" class="hover:text-slate-900 dark:hover:text-slate-100">Email</a>
+                <a href="https://linkedin.com/in/isaacomondi" class="hover:text-slate-900 dark:hover:text-slate-100">LinkedIn</a>
+                <a href="https://github.com/isaacomondi" class="hover:text-slate-900 dark:hover:text-slate-100">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+
+        // Check for saved theme preference or default to light mode
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        if (savedTheme === 'dark') {
+            html.classList.add('dark');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            const isDark = html.classList.contains('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            document.querySelector('.light-mode').classList.toggle('hidden');
+            document.querySelector('.dark-mode').classList.toggle('hidden');
+        });
+
+        // Update theme toggle on load
+        if (html.classList.contains('dark')) {
+            document.querySelector('.light-mode').classList.add('hidden');
+            document.querySelector('.dark-mode').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
