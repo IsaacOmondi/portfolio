@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Isaac Omondi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * {
+            @apply transition-colors duration-300;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100">
+    <nav class="sticky top-0 z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="font-mono text-lg font-bold hover:text-blue-600 dark:hover:text-blue-400">io</a>
+            <div class="flex gap-6">
+                <a href="index.html" class="text-sm hover:text-blue-600 dark:hover:text-blue-400">Home</a>
+                <a href="about.html" class="text-sm hover:text-blue-600 dark:hover:text-blue-400">About</a>
+                <a href="portfolio.html" class="text-sm hover:text-blue-600 dark:hover:text-blue-400">Work</a>
+                <a href="contact.html" class="text-sm hover:text-blue-600 dark:hover:text-blue-400">Contact</a>
+                <button id="themeToggle" class="text-sm hover:text-blue-600 dark:hover:text-blue-400 font-mono">
+                    <span class="light-mode">◐</span>
+                    <span class="dark-mode hidden">◑</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="py-20 px-6 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="font-mono text-5xl md:text-6xl font-bold mb-6">Work</h1>
+            <p class="text-xl text-slate-600 dark:text-slate-400">
+                A selection of backend projects and systems I've architected and shipped to production.
+            </p>
+        </div>
+    </section>
+
+    <!-- All Projects -->
+    <section class="py-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="space-y-8">
+
+                <!-- Branch International -->
+                <a href="project-branch.html" class="group block p-6 border border-slate-200 dark:border-slate-800 hover:border-slate-900 dark:hover:border-slate-100 hover:bg-slate-50 dark:hover:bg-slate-900/50">
+                    <div class="flex justify-between items-start mb-3">
+                        <h2 class="font-mono text-2xl font-bold group-hover:text-blue-600 dark:group-hover:text-blue-400">Fintech Compliance & Security Systems</h2>
+                        <span class="text-sm text-slate-500 dark:text-slate-400 font-mono whitespace-nowrap ml-4">Sep 2023 - Dec 2024</span>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 mb-4">
+                        Built critical compliance and fraud detection infrastructure for a fintech lending platform. Engineered automated loan disbursement, multi-country sanctions verification, and facial recognition systems. Reduced manual reviews by 40%.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs px-3 py-1 bg-slate-100 dark:bg-slate-800 font-mono">Node.js</span>
+                        <span class="text-xs px-3 py-1 bg-slate-100 dark:bg-slate-800 font-mono">Python</span>
+                        <span class="text-xs px-3 py-1 bg-slate-100 dark:bg-slate-800 font-mono">Fintech</span>
+                        <span class="text-xs px-3 py-1 bg-slate-100 dark:bg-slate-800 font-mono">Security</span>
+                    </div>
+                    <div class="text-sm text-slate-500 dark:text-slate-400 font-mono">
+                        Role: Backend Engineer
+                    </div>
+                </a>
+
+                <!-- Sendy -->
+                <a href="project-sendy.html" class="group block p-6 border border-slate-200 dark:border-slate-800 hover:border-slate-900 dark:hover:border-slate-100 hover:bg-slate-50 dark:hover:bg-slate-900/50">
+                    <div class="flex justify-between items-start mb-3">
+                        <h2 class="font-mono text-2xl font-bold group-hover:text-blue-600 dark:group-hover:text-blue-400">Sendy Middleware Architecture</h2>
+                        <span class="text-sm text-slate-500 dark:text-slate-400 font-mono whitespace-nowrap ml-4">Apr 2019 - Aug 2023</span>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 mb-4">
+                        Led the migration of legacy PHP APIs to a modern Node.js microservices architecture. Improved API response times by 90%, reduced payload sizes by 30%, and established clean architecture standards across the team.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs px-3 py-1 bg-slate-100 dark:bg-slate-800 font-mono">Node.js</span>
+                        <span class="text-xs px-3 py-1 bg-slate-100 dark:bg-slate-800 font-mono">TypeScript</span>
+                        <span class="text-xs px-3 py-1 bg-slate-100 dark:bg-slate-800 font-mono">Microservices</span>
+                        <span class="text-xs px-3 py-1 bg-slate-100 dark:bg-slate-800 font-mono">Architecture</span>
+                    </div>
+                    <div class="text-sm text-slate-500 dark:text-slate-400 font-mono">
+                        Role: Middleware Chapter Lead
+                    </div>
+                </a>
+
+                <!-- XelphaHealth -->
+                <a href="project-xelpha.html" class="group block p-6 border border-slate-200 dark:border-slate-800 hover:border-slate-900 dark:hover:border-slate-100 hover:bg-slate-50 dark:hover:bg-slate-900/50">
+                    <div class="flex justify-between items-start mb-3">
+                        <h2 class="font-mono text-2xl font-bold group-hover:text-blue-600 dark:group-hover:text-blue-400">Healthcare Microservices Platform</h2>
+                        <span class="text-sm text-slate-500 dark:text-slate-400 font-mono whitespace-nowrap ml-4">May 2018 - Mar 2019</span>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 mb-4">
+                        Refactored microservices architecture and optimized database layer for healthcare platform. Eliminated 20% of redundant code, improved query performance through SQL optimization, and conducted comprehensive load testing for production readiness.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs px-3 py-1 bg-slate-100 dark:bg-slate-800 font-mono">Node.js</span>
+                        <span class="text-xs px-3 py-1 bg-slate-100 dark:bg-slate-800 font-mono">PostgreSQL</span>
+                        <span class="text-xs px-3 py-1 bg-slate-100 dark:bg-slate-800 font-mono">Full Stack</span>
+                        <span class="text-xs px-3 py-1 bg-slate-100 dark:bg-slate-800 font-mono">Performance</span>
+                    </div>
+                    <div class="text-sm text-slate-500 dark:text-slate-400 font-mono">
+                        Role: Full Stack Developer
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 dark:border-slate-800 py-8 px-6">
+        <div class="max-w-4xl mx-auto text-center text-sm text-slate-600 dark:text-slate-400">
+            <p>Isaac Omondi · Backend Developer</p>
+            <div class="mt-4 flex justify-center gap-6">
+                <a href="mailto:Isaac.Omondi@protonmail.com" class="hover:text-slate-900 dark:hover:text-slate-100">Email</a>
+                <a href="https://linkedin.com/in/isaacomondi/" class="hover:text-slate-900 dark:hover:text-slate-100">LinkedIn</a>
+                <a href="https://github.com/isaacomondi/" class="hover:text-slate-900 dark:hover:text-slate-100">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+
+        // Check for saved theme preference or default to light mode
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        if (savedTheme === 'dark') {
+            html.classList.add('dark');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            const isDark = html.classList.contains('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            document.querySelector('.light-mode').classList.toggle('hidden');
+            document.querySelector('.dark-mode').classList.toggle('hidden');
+        });
+
+        // Update theme toggle on load
+        if (html.classList.contains('dark')) {
+            document.querySelector('.light-mode').classList.add('hidden');
+            document.querySelector('.dark-mode').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
