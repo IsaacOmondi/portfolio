@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Microservices - Isaac Omondi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * {
+            @apply transition-colors duration-300;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100">
+    <nav class="sticky top-0 z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="font-mono text-lg font-bold hover:text-blue-600 dark:hover:text-blue-400">io</a>
+            <div class="flex gap-6">
+                <a href="index.html" class="text-sm hover:text-blue-600 dark:hover:text-blue-400">Home</a>
+                <a href="about.html" class="text-sm hover:text-blue-600 dark:hover:text-blue-400">About</a>
+                <a href="portfolio.html" class="text-sm hover:text-blue-600 dark:hover:text-blue-400">Work</a>
+                <a href="contact.html" class="text-sm hover:text-blue-600 dark:hover:text-blue-400">Contact</a>
+                <button id="themeToggle" class="text-sm hover:text-blue-600 dark:hover:text-blue-400 font-mono">
+                    <span class="light-mode">◐</span>
+                    <span class="dark-mode hidden">◑</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="py-20 px-6 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-4xl mx-auto">
+            <a href="portfolio.html" class="text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 mb-6 inline-block">
+                ← Back to work
+            </a>
+            <h1 class="font-mono text-5xl md:text-6xl font-bold mb-4">Healthcare Microservices</h1>
+            <p class="text-xl text-slate-600 dark:text-slate-400 mb-6">
+                Full Stack Developer at XelphaHealth
+            </p>
+            <p class="text-sm text-slate-500 dark:text-slate-400 font-mono">
+                May 2018 - Mar 2019 · Nairobi, Kenya
+            </p>
+        </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="py-20 px-6 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-mono text-2xl font-bold mb-6">Overview</h2>
+            <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+                XelphaHealth is a healthcare technology platform providing telemedicine and health management services. During my time there, I worked on refactoring the backend microservices architecture to improve code quality and system performance. This was my first major role focusing on full stack development, where I gained deep experience with both frontend and backend optimization.
+            </p>
+            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                The project centered on eliminating technical debt, optimizing database queries, and ensuring the platform could handle production load with reliability.
+            </p>
+        </div>
+    </section>
+
+    <!-- Challenge -->
+    <section class="py-20 px-6 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-mono text-2xl font-bold mb-6">The Challenge</h2>
+            <ul class="space-y-4 text-slate-600 dark:text-slate-400">
+                <li class="flex gap-4">
+                    <span class="text-blue-600 dark:text-blue-400 font-mono flex-shrink-0">▪</span>
+                    <span><strong>Code duplication:</strong> Multiple microservices had replicated business logic, making maintenance difficult</span>
+                </li>
+                <li class="flex gap-4">
+                    <span class="text-blue-600 dark:text-blue-400 font-mono flex-shrink-0">▪</span>
+                    <span><strong>Query performance:</strong> N+1 queries and inefficient joins were causing slow API response times</span>
+                </li>
+                <li class="flex gap-4">
+                    <span class="text-blue-600 dark:text-blue-400 font-mono flex-shrink-0">▪</span>
+                    <span><strong>Production readiness:</strong> System hadn't been load tested; unknown how it would perform under real usage</span>
+                </li>
+                <li class="flex gap-4">
+                    <span class="text-blue-600 dark:text-blue-400 font-mono flex-shrink-0">▪</span>
+                    <span><strong>Technical debt:</strong> Legacy patterns and inconsistent architecture made onboarding new developers challenging</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="py-20 px-6 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-mono text-2xl font-bold mb-8">The Solution</h2>
+
+            <div class="space-y-12">
+                <div>
+                    <h3 class="font-mono font-bold text-lg mb-3">1. Microservices Refactoring</h3>
+                    <p class="text-slate-600 dark:text-slate-400 mb-4">
+                        Systematically reviewed and refactored each microservice to eliminate redundant code. Extracted common patterns into shared libraries and standardized communication between services.
+                    </p>
+                    <div class="text-sm text-slate-600 dark:text-slate-400">
+                        <strong>Impact:</strong> Eliminated 20% of codebase, reduced maintenance surface area
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="font-mono font-bold text-lg mb-3">2. SQL Query Optimization</h3>
+                    <p class="text-slate-600 dark:text-slate-400 mb-4">
+                        Analyzed database query patterns using explain plans and query profiling. Identified N+1 problems, unnecessary joins, and missing indexes. Rewrote critical queries for efficiency.
+                    </p>
+                    <div class="text-sm text-slate-600 dark:text-slate-400">
+                        <strong>Impact:</strong> Improved query performance, reduced database load
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="font-mono font-bold text-lg mb-3">3. Load Testing & Stress Testing</h3>
+                    <p class="text-slate-600 dark:text-slate-400 mb-4">
+                        Conducted comprehensive load testing to identify bottlenecks and failure points. Simulated production traffic patterns and measured system behavior under stress. Identified and fixed scaling issues before they impacted real users.
+                    </p>
+                    <div class="text-sm text-slate-600 dark:text-slate-400">
+                        <strong>Impact:</strong> Verified production readiness, prevented outages
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="font-mono font-bold text-lg mb-3">4. Application Performance Monitoring</h3>
+                    <p class="text-slate-600 dark:text-slate-400 mb-4">
+                        Implemented monitoring and logging to track API performance in production. Set up alerts for slow queries and error rates. Created dashboards for real-time system visibility.
+                    </p>
+                    <div class="text-sm text-slate-600 dark:text-slate-400">
+                        <strong>Impact:</strong> Better visibility into system health and performance
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="font-mono font-bold text-lg mb-3">5. Caching Strategy</h3>
+                    <p class="text-slate-600 dark:text-slate-400 mb-4">
+                        Designed and implemented caching layers at multiple levels: HTTP caching, database result caching with Redis, and application-level caching for frequently accessed data.
+                    </p>
+                    <div class="text-sm text-slate-600 dark:text-slate-400">
+                        <strong>Impact:</strong> Reduced database queries, faster response times
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outcomes -->
+    <section class="py-20 px-6 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-mono text-2xl font-bold mb-8">Outcomes & Metrics</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="p-6 border border-slate-200 dark:border-slate-800">
+                    <p class="font-mono font-bold text-2xl text-blue-600 dark:text-blue-400 mb-2">20%</p>
+                    <p class="text-slate-600 dark:text-slate-400">Code duplication eliminated</p>
+                </div>
+                <div class="p-6 border border-slate-200 dark:border-slate-800">
+                    <p class="font-mono font-bold text-2xl text-blue-600 dark:text-blue-400 mb-2">Significant</p>
+                    <p class="text-slate-600 dark:text-slate-400">Query performance improvement</p>
+                </div>
+                <div class="p-6 border border-slate-200 dark:border-slate-800">
+                    <p class="font-mono font-bold text-2xl text-blue-600 dark:text-blue-400 mb-2">Load tested</p>
+                    <p class="text-slate-600 dark:text-slate-400">Production-ready verification</p>
+                </div>
+                <div class="p-6 border border-slate-200 dark:border-slate-800">
+                    <p class="font-mono font-bold text-2xl text-blue-600 dark:text-blue-400 mb-2">Monitored</p>
+                    <p class="text-slate-600 dark:text-slate-400">Real-time performance tracking</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="py-20 px-6 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-mono text-2xl font-bold mb-6">Technology Stack</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="font-mono font-bold mb-4">Backend</h3>
+                    <ul class="space-y-2 text-slate-600 dark:text-slate-400">
+                        <li>• Node.js & Express.js</li>
+                        <li>• PostgreSQL for data</li>
+                        <li>• Redis for caching</li>
+                        <li>• RESTful API design</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-mono font-bold mb-4">Tools & Practices</h3>
+                    <ul class="space-y-2 text-slate-600 dark:text-slate-400">
+                        <li>• SQL query profiling & optimization</li>
+                        <li>• Load testing tools</li>
+                        <li>• APM & monitoring</li>
+                        <li>• Git version control</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Learnings -->
+    <section class="py-20 px-6 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-mono text-2xl font-bold mb-6">Key Learnings</h2>
+            <ul class="space-y-4 text-slate-600 dark:text-slate-400">
+                <li class="flex gap-4">
+                    <span class="text-blue-600 dark:text-blue-400 font-mono flex-shrink-0">▪</span>
+                    <span><strong>Performance is a feature:</strong> Slow systems feel broken; optimization isn't optional, it's part of the user experience</span>
+                </li>
+                <li class="flex gap-4">
+                    <span class="text-blue-600 dark:text-blue-400 font-mono flex-shrink-0">▪</span>
+                    <span><strong>Load test before production:</strong> You can't guess how systems will perform; testing is essential to prevent outages</span>
+                </li>
+                <li class="flex gap-4">
+                    <span class="text-blue-600 dark:text-blue-400 font-mono flex-shrink-0">▪</span>
+                    <span><strong>Monitoring enables action:</strong> Visibility into system behavior is prerequisite for effective optimization</span>
+                </li>
+                <li class="flex gap-4">
+                    <span class="text-blue-600 dark:text-blue-400 font-mono flex-shrink-0">▪</span>
+                    <span><strong>Technical debt compounds:</strong> Small quality issues accumulate; addressing them early is much cheaper than major refactors</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 dark:border-slate-800 py-8 px-6">
+        <div class="max-w-4xl mx-auto text-center text-sm text-slate-600 dark:text-slate-400">
+            <p>Isaac Omondi · Backend Developer</p>
+            <div class="mt-4 flex justify-center gap-6">
+                <a href="mailto:Isaac.Omondi@protonmail.com" class="hover:text-slate-900 dark:hover:text-slate-100">Email</a>
+                <a href="https://linkedin.com/in/isaacomondi" class="hover:text-slate-900 dark:hover:text-slate-100">LinkedIn</a>
+                <a href="https://github.com/isaacomondi" class="hover:text-slate-900 dark:hover:text-slate-100">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+
+        // Check for saved theme preference or default to light mode
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        if (savedTheme === 'dark') {
+            html.classList.add('dark');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            const isDark = html.classList.contains('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            document.querySelector('.light-mode').classList.toggle('hidden');
+            document.querySelector('.dark-mode').classList.toggle('hidden');
+        });
+
+        // Update theme toggle on load
+        if (html.classList.contains('dark')) {
+            document.querySelector('.light-mode').classList.add('hidden');
+            document.querySelector('.dark-mode').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
